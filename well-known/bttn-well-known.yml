@@ -1,0 +1,110 @@
+generated: '2026-08-08'
+method: probed
+source: live GET of /.well-known/* and contract-discovery paths on the bttn storefront host
+host: https://www.bttnusa.com
+summary: >-
+  No well-known document, machine-readable contract, or agent surface was found.
+  The host is a Next.js (Catalyst) application in front of a BigCommerce store and
+  answers HTTP 200 with the same ~454KB HTML catch-all page for EVERY unknown path,
+  so a bare 200 is NOT evidence of a document here. Every probe below was diffed
+  against a control path that cannot exist; each candidate returned the control page.
+soft_404:
+  detected: true
+  control_path: /zzz-nonexistent-ae-probe
+  control_status: 200
+  control_content_type: text/html; charset=utf-8
+  control_size: 454306
+  note: >-
+    Only /api-docs and /api returned a real 404 (13,045 bytes). Every other candidate
+    returned the 200 HTML catch-all within a few hundred bytes of the control page,
+    with the requested slug echoed back into the Next.js router payload. Treat all
+    200s in documents[] as misses.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  result: soft-404 (HTML catch-all, not RFC 9116 text)
+- path: /.well-known/openid-configuration
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /.well-known/api-catalog
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /.well-known/ai-plugin.json
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /.well-known/agent-card.json
+  status: 200
+  result: soft-404 (HTML catch-all, not an AgentCard object)
+- path: /.well-known/agent.json
+  status: 200
+  result: soft-404 (HTML catch-all, not an AgentCard object)
+contract_discovery:
+- path: /openapi.json
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /openapi.yaml
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /swagger.json
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /v1/openapi.json
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /api-docs
+  status: 404
+  result: true 404
+- path: /api
+  status: 404
+  result: true 404
+- path: /docs
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /redoc
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /developers
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /developer
+  status: 200
+  result: soft-404 (HTML catch-all)
+- path: /llms.txt
+  status: 200
+  result: soft-404 (HTML catch-all, not llms.txt text)
+- path: /graphql
+  status: 200
+  method: POST introspection {__schema{queryType{name}}}
+  result: soft-404 (HTML catch-all; no GraphQL endpoint)
+subdomains_probed:
+- host: api.bttnusa.com
+  result: NXDOMAIN
+- host: docs.bttnusa.com
+  result: NXDOMAIN
+- host: developer.bttnusa.com
+  result: NXDOMAIN
+- host: developers.bttnusa.com
+  result: NXDOMAIN
+- host: status.bttnusa.com
+  result: NXDOMAIN
+- host: trust.bttnusa.com
+  result: NXDOMAIN
+- host: security.bttnusa.com
+  result: NXDOMAIN
+- host: app.bttnusa.com
+  result: NXDOMAIN
+domain_notes:
+- domain: bttn.com
+  status: 200
+  result: >-
+    Not operated by bttn Inc. — a parked domain-broker landing page (dddsg.com
+    template) served in an iframe. Do not treat as a bttn property.
+- domain: bttn.io
+  status: 200
+  result: redirects to usebutton.com (Button Inc., an unrelated company)
+- domain: bttn.co
+  status: 200
+  result: BTTN Holdings LLC (Wes Button, design/marketing consultancy) — unrelated

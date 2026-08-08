@@ -42,5 +42,19 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-bttn is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+bttn (bttn Inc., trading online as bttnusa.com) is a Seattle, Washington based business-to-business
+e-commerce marketplace and wholesale distributor of medical supplies, lab equipment and
+pharmaceuticals, selling name-brand consumables to clinics, dental, veterinary and physical-therapy
+practices, clinical laboratories, home-healthcare providers and other healthcare buyers across the
+United States. Founded in 2021 by JT Garwood and Jack Miller and backed by Tiger Global, the company
+operates a self-serve online storefront carrying 60,000+ catalog products with bulk and volume
+pricing, same- or next-business-day shipping, quote requests, purchase-order and invoice payment,
+shopping lists, quick-order pads and recurring reorder tooling.
+
+**No public API.** As of 2026-08-08 bttn publishes no developer program, API reference, or
+machine-readable contract (OpenAPI, AsyncAPI, GraphQL, MCP, or A2A agent card) on any of its hosts.
+The storefront host answers HTTP 200 with the same HTML catch-all page for every unknown path, so a
+bare 200 is not evidence of a document there — see `well-known/bttn-well-known.yml` for the full
+probe record and the control-path diff.
+
+- https://bttnusa.com/
