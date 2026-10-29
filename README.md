@@ -64,19 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-bttn (bttn Inc., trading online as bttnusa.com) is a Seattle, Washington based business-to-business
-e-commerce marketplace and wholesale distributor of medical supplies, lab equipment and
-pharmaceuticals, selling name-brand consumables to clinics, dental, veterinary and physical-therapy
-practices, clinical laboratories, home-healthcare providers and other healthcare buyers across the
-United States. Founded in 2021 by JT Garwood and Jack Miller and backed by Tiger Global, the company
-operates a self-serve online storefront carrying 60,000+ catalog products with bulk and volume
-pricing, same- or next-business-day shipping, quote requests, purchase-order and invoice payment,
-shopping lists, quick-order pads and recurring reorder tooling.
+bttn (bttn Inc., trading online as bttnusa.com) is a Seattle, Washington based business-to-business e-commerce marketplace and wholesale distributor of medical supplies, lab equipment and pharmaceuticals, selling name-brand consumables to clinics, dental, veterinary and physical-therapy practices, clinical laboratories, home-healthcare providers and other healthcare buyers across the United States. Founded in 2021 by JT Garwood and Jack Miller and backed by Tiger Global, the company operates a self-serve online storefront carrying 60,000+ catalog products with bulk and volume pricing, same- or next-business-day shipping, quote requests, purchase-order and invoice payment, shopping lists, quick-order pads and recurring reorder tooling. The storefront is a BigCommerce commerce back end fronted by a Catalyst/Next.js application. bttn publishes no public developer program, API reference, or machine-readable API contract; its e-commerce surface is buyer-facing only.
 
-**No public API.** As of 2026-08-08 bttn publishes no developer program, API reference, or
-machine-readable contract (OpenAPI, AsyncAPI, GraphQL, MCP, or A2A agent card) on any of its hosts.
-The storefront host answers HTTP 200 with the same HTML catch-all page for every unknown path, so a
-bare 200 is not evidence of a document there — see `well-known/bttn-well-known.yml` for the full
-probe record and the control-path diff.
+**Areas:** Company · Medical Supplies · Healthcare · E-Commerce · Marketplace · Wholesale · Distribution · Procurement · B2B
 
-- https://bttnusa.com/
+## bttn on APIs.io
+
+Everything profiled for bttn is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bttn/](https://apis.io/providers/bttn/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bttn Domain Security](https://apis.io/security/bttn/bttn-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://bttnusa.com/)
+- [Sign up](https://bttnusa.com/register)
+- [Support](https://bttnusa.com/contact-us/)
+- [Blog](https://bttnusa.com/blog/)
+- [Terms of service](https://bttnusa.com/terms-of-use/)
+- [Privacy policy](https://bttnusa.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 5.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 6.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bttn/](https://apis.io/providers/bttn/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for bttn: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bttn/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
